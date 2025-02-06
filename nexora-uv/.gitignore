@@ -1,15 +1,22 @@
-# Virtual environments
-env/
-venv/
+# Environment variables
 .env
-.venv/
 
 # Python
 __pycache__/
 *.py[cod]
 *$py.class
-*.so
 .Python
+env/
+venv/
+.env/
+.venv/
+
+# IDE
+.vscode/
+.idea/
+
+# Python
+*.so
 build/
 develop-eggs/
 dist/
@@ -27,8 +34,6 @@ wheels/
 *.egg
 
 # IDE specific files
-.idea/
-.vscode/
 *.swp
 *.swo
 .DS_Store
@@ -38,7 +43,6 @@ wheels/
 
 # Local development
 *.log
-.env
 .env.local
 .env.*.local
 
