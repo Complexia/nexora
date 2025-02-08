@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import ChatInput from '@/components/ChatInput';
 import ChatMessages from '@/components/ChatMessages';
+import Navbar from '@/components/navbar';
 
 export interface ChatMessage {
   role: 'user' | 'assistant';
@@ -74,25 +75,28 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="container mx-auto max-w-4xl h-screen flex flex-col">
-      <div className="p-4">
-        <select 
-          className="select select-bordered w-full max-w-xs"
-          value={selectedModel}
-          onChange={(e) => setSelectedModel(e.target.value as ModelOption)}
-        >
-          {models.map((model) => (
-            <option key={model.value} value={model.value}>
-              {model.label}
-            </option>
-          ))}
-        </select>
-      </div>
-      <div className="flex-1 overflow-y-auto p-4">
-        <ChatMessages messages={messages} />
-      </div>
-      <div className="p-4">
-        <ChatInput onSendMessage={handleSendMessage} isLoading={isLoading} />
+    <div className="flex flex-col">
+      <Navbar />
+      <div className="container mx-auto max-w-4xl flex-1 flex flex-col">
+        <div className="p-4">
+          <select 
+            className="select select-bordered w-full max-w-xs"
+            value={selectedModel}
+            onChange={(e) => setSelectedModel(e.target.value as ModelOption)}
+          >
+            {models.map((model) => (
+              <option key={model.value} value={model.value}>
+                {model.label}
+              </option>
+            ))}
+          </select>
+        </div>
+        <div className="flex-1 overflow-y-auto p-4">
+          <ChatMessages messages={messages} />
+        </div>
+        <div className="p-4">
+          <ChatInput onSendMessage={handleSendMessage} isLoading={isLoading} />
+        </div>
       </div>
     </div>
   );

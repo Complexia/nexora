@@ -9,10 +9,14 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@rainbow-me/rainbowkit": "^2.2.3",
+    "@tanstack/react-query": "^5.66.0",
+    "daisyui": "latest",
+    "next": "latest",
     "react": "latest",
     "react-dom": "latest",
-    "next": "latest",
-    "daisyui": "latest"
+    "viem": "^2.22.22",
+    "wagmi": "^2.14.10"
   },
   "devDependencies": {
     "typescript": "^5",
