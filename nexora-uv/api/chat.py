@@ -1,10 +1,17 @@
+import os
+from dotenv import load_dotenv
 from fastapi import APIRouter, HTTPException
 from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 from openai import AsyncOpenAI
-import os
 import httpx
 import json
+
+# Add at the very top of the file
+print("Current working directory:", os.getcwd())
+print("Does .env exist?:", os.path.exists(".env"))
+load_dotenv()
+
 
 router = APIRouter(prefix="/chat")
 
