@@ -12,7 +12,7 @@ import { http, createConfig } from 'wagmi';
 
 const config = getDefaultConfig({
   appName: 'Nexora',
-  projectId: process.env.WALLETCONNECT_PROJECT_ID,
+  projectId: "12",
   chains: [mainnet, sepolia],
 });
 

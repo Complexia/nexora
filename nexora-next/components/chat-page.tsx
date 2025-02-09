@@ -75,7 +75,7 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="flex flex-col">
+    <div className="flex flex-col h-screen">
       <Navbar />
       <div className="container mx-auto max-w-4xl flex-1 flex flex-col">
         <div className="p-4">
@@ -94,7 +94,7 @@ export default function ChatPage() {
         <div className="flex-1 overflow-y-auto p-4">
           <ChatMessages messages={messages} />
         </div>
-        <div className="p-4">
+        <div className="p-4 mt-auto">
           <ChatInput onSendMessage={handleSendMessage} isLoading={isLoading} />
         </div>
       </div>
