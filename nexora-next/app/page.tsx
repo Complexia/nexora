@@ -1,9 +1,7 @@
-import ChatPage from "@/components/chat-page";
-import GameProfile from "@/components/game-profile/profile";
+import Interface from "@/components/interface";
 
 export default function Home() {
   return (
-    <GameProfile />
-    
+    <Interface />
   );
 }

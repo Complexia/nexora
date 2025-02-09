@@ -1,6 +1,6 @@
 'use client';
 
-import { ConnectButton } from '@rainbow-me/rainbowkit';
+import { SolanaConnectButton } from './solana-connect-button';
 
 export default function Navbar() {
   return (
@@ -8,7 +8,7 @@ export default function Navbar() {
       <div className="container mx-auto px-4">
         <div className="flex justify-between items-center h-16">
           <div>
-            <ConnectButton />
+            <SolanaConnectButton />
           </div>
           {/* <div className="text-xl font-bold">
             AI Chat
